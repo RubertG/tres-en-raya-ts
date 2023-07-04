@@ -3,6 +3,10 @@
   --border-size: 6px
 }
 
+.board div:nth-child(1) {
+  border-top-left-radius: var(--border-size);
+}
+
 .board div:nth-child(1),
 .board div:nth-child(2) {
   border: var(--border-size) solid var(--border-color);
@@ -11,6 +15,7 @@
 }
 
 .board div:nth-child(3) {
+  border-top-right-radius: var(--border-size);
   border-bottom: var(--border-size) solid var(--border-color);
 }
 
@@ -22,6 +27,10 @@
   border-right: var(--border-size) solid var(--border-color);
 }
 
+.board div:nth-child(7) {
+  border-bottom-left-radius: var(--border-size);
+}
+
 .board div:nth-child(7),
 .board div:nth-child(8) {
   border: var(--border-size) solid var(--border-color);
@@ -30,5 +39,6 @@
 }
 
 .board div:nth-child(9) {
+  border-bottom-right-radius: var(--border-size);
   border-top: var(--border-size) solid var(--border-color);
 }
