@@ -5,7 +5,7 @@ const App = (): JSX.Element => {
   return (
     <div className="flex justify-center items-center flex-col h-screen bg-slate-950 p-5">
       <h1
-        className="text-6xl tracking-tight font-extrabold text-white">
+        className="sm:text-6xl tracking-tight font-extrabold text-white text-4xl">
         Tres en raya - TS
       </h1>
       <Board />

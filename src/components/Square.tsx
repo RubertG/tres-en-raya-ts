@@ -1,3 +1,4 @@
+import { OPTIONS } from '../consts/consts'
 import { type SquareOptions } from '../types/types'
 
 interface Props {
@@ -7,11 +8,13 @@ interface Props {
 }
 
 const Square: React.FC<Props> = ({ children, index, onClick }): JSX.Element => {
+  const textColor = children === OPTIONS.X ? 'text-red-500' : 'text-blue-500'
+
   return (
     <div
-      className="w-[120px] h-[120px] flex items-center justify-center text-5xl font-semibold text-white cursor-pointer hover:bg-slate-900 transition-colors"
+      className={'sm:w-[120px] sm:h-[120px] w-[100px] h-[100px] flex items-center justify-center text-6xl font-semibold cursor-pointer md:hover:bg-slate-900 transition-colors'}
       onClick={() => { onClick(index) }}>
-      {children}
+      <p className={textColor}>{children}</p>
     </div>
   )
 }
