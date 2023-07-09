@@ -10,3 +10,12 @@ export const verifyWinner = (board: SquareOptions[]): boolean => {
   }
   return false
 }
+export const verifyDraw = (board: SquareOptions[]): number => {
+  for (let i = 0; WINNING_COMBO.length > i; i++) {
+    const [a, b, c] = WINNING_COMBO[i]
+    if (board[a] !== null && board[a] === board[b] && board[c] === board[b]) {
+      return i
+    }
+  }
+  return -1
+}

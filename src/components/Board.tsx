@@ -3,6 +3,7 @@ import Footer from './Footer'
 import WinnerPopup from './WinnerPopup'
 import { useBoard } from '../hooks/useBoard'
 import { AnimatePresence } from 'framer-motion'
+import LineWinner from './LineWinner'
 
 const Board = (): JSX.Element => {
   const { board, handleClick, resetBoard, winner, winnerPopup, turn } = useBoard()
@@ -14,7 +15,7 @@ const Board = (): JSX.Element => {
           winnerPopup && <WinnerPopup winner={winner} />
         }
       </AnimatePresence>
-      <main className="grid grid-cols-3 grid-rows-3 mt-10 board">
+      <main className="relative grid grid-cols-3 grid-rows-3 mt-10 board">
         {
           board.map((value, index) => {
             return (
@@ -24,6 +25,11 @@ const Board = (): JSX.Element => {
             )
           })
         }
+        <AnimatePresence>
+          {
+            winnerPopup && <LineWinner board={board} winner={winner} />
+          }
+        </AnimatePresence>
       </main>
       <Footer turn={turn} resetBoard={resetBoard} />
     </>

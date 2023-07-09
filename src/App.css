@@ -42,3 +42,45 @@
   border-bottom-right-radius: var(--border-size);
   border-top: var(--border-size) solid var(--border-color);
 }
+
+.line-winner-1 {
+  left: 14.7%;
+}
+
+.line-winner-2 {
+  left: 47.5%;
+}
+
+.line-winner-3 {
+  left: 82%;
+}
+
+.line-winner-4 {
+  top: -34.1%;
+  transform: rotate(90deg) translateY(-49%);
+}
+
+.line-winner-5 {
+  transform: rotate(90deg) translateY(-49%);
+}
+
+.line-winner-6 {
+  top: 34.4%;
+  transform: rotate(90deg) translateY(-49%);
+}
+
+.line-winner-7 {
+  left: 47.5%;
+  transform: rotate(-45deg);
+}
+
+.line-winner-8 {
+  left: 47.5%;
+  transform: rotate(45deg);
+}
+
+@media (min-width: 640px) {
+  .line-winner-2 {
+    left: 48%;
+  }
+}
